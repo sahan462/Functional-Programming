@@ -3,10 +3,20 @@ import scala.math.abs
 object fourthq {
 
   def main(args: Array[String]): Unit = {
-    print("Enter Ticket Price: ")
-    val price: Int = scala.io.StdIn.readInt()
-    print(price)
-    print(getProfit(price))
+//    print("Enter Ticket Price: ")
+//    val price: Int = scala.io.StdIn.readInt()
+//    print(price)
+//    print(getProfit(price))
+    getBestTicketPrice()
+  }
+
+  def getBestTicketPrice(): Unit = {
+    var i : Int = 1;
+
+    while(i < 50){
+      println(i," ",getProfit(i))
+      i = i + 1
+    }
   }
 
   def getProfit(price : Double): List[Double] = {
@@ -15,7 +25,7 @@ object fourthq {
     val baseAttendance : Int = 120
     var attendance : Int = 0;
     var additional_amount : Int = 0
-    val rate : Int = 4
+    val rate : Int = 20/5
     var normal_total_revenue : Double = 0
     var abnormal_total_revenue : Double = 0
     var profit_1 : Double = 0;
@@ -43,12 +53,5 @@ object fourthq {
       val profits: List[Double] = List(profit_1,profit_2)
       return profits
     }
-
-
-
-
-
-
   }
-
-  }
+}

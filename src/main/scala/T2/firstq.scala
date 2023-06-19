@@ -17,13 +17,6 @@ object firstq {
     println(f + 10*5 +g)
 
     i+=1
-
     println(i * n)
-
   }
-
-
-
-
-
 }
