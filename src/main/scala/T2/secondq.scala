@@ -9,11 +9,12 @@ object secondq {
     var c : Int = 4
     var d : Int = 5
     var k  = 4.3f
-    var g : Int = 10
+    var g : Double = 4.0f
 
     b = b - 1
-    d = d - 1
     println(b * a + c * d)
+    d = d - 1
+
 
     println(a)
     a = a + 1
@@ -22,7 +23,6 @@ object secondq {
 
 
     println(c)
-    c = c + 1
 
     c = c + 1
     println(c*a)
