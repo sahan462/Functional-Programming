@@ -8,7 +8,4 @@ object thirdq {
 
   def CalTakeHomeSalary(nw_rate : Int, ot_rate : Int, nwh : Int, otwh : Int,tax:Double): Double = ((nwh * nw_rate + otwh * ot_rate) * (1 - tax)) * 4
 
-
-
-
 }
