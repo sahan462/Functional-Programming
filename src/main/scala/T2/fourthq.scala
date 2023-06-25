@@ -7,11 +7,11 @@ object fourthq {
   }
 
   def getBestTicketPrice(): Unit = {
-    var i : Int = 0;
+    var ticket_price : Int = 0;
 
-    while(i < 50){
-      println(i," ",getProfit(i))
-      i = i + 5
+    while(ticket_price < 50){
+      println(ticket_price," ",getProfit(ticket_price))
+      ticket_price = ticket_price + 5
     }
   }
 
