@@ -7,7 +7,7 @@ object thirdq {
 
   def main(args: Array[String]): Unit = {
 
-    print(CalMean(10,15));
+    print(CalMean(10,14));
 
   }
 
