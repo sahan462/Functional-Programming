@@ -19,7 +19,7 @@ object firstq {
 
     var empty_string = "";
 
-    println("Please enter your name: ")
+    println("Please enter String: ")
     val string = StdIn.readLine()
 
     println(reverseString(string,string.length,empty_string))
