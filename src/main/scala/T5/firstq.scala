@@ -3,14 +3,14 @@ import scala.io.StdIn
 
 object firstq {
 
-  def findPrime(x:Int, y:Int): String = {
+  def Prime(x:Int, y:Int): String = {
     if(y==1){
       return "true";
     }else{
       if(x%y == 0){
         return "false"
       }else{
-        findPrime(x,y-1);
+        Prime(x,y-1);
       }
     }
   }
@@ -19,7 +19,7 @@ object firstq {
   def main(args: Array[String]): Unit = {
     print("Enter Value: ");
     val x = StdIn.readLine().toInt;
-    println(findPrime(x,(x-1)));
+    println(Prime(x,(x-1)));
   }
 
 }
