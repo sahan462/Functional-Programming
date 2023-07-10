@@ -15,7 +15,7 @@ object sixth {
           return (Fibonacci(n - 1) + Fibonacci(n - 2));
         }
       }
-      println(Fibonacci(x-1));
+      print(Fibonacci(x-1)+" ");
       cal_fib_seq(x-1);
     }
   }
