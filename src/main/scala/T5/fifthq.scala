@@ -23,8 +23,4 @@ object fifthq {
     val x = StdIn.readLine().toInt;
     println(get_even_sum(x));
   }
-
-
-
-
 }
