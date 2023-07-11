@@ -4,9 +4,9 @@ import scala.io.StdIn
 
 object sixth {
 
-  def cal_fib_seq(x:Int): Unit = {
+  def cal_fib_seq(x:Int, ls:List[Int]): List[Int] = {
     if(x <= 0){
-      return
+      return ls.sorted
     }else {
       def Fibonacci(n: Int): Int = {
         if (n <= 1) {
@@ -15,8 +15,8 @@ object sixth {
           return (Fibonacci(n - 1) + Fibonacci(n - 2));
         }
       }
-      print(Fibonacci(x-1)+" ");
-      cal_fib_seq(x-1);
+      val nl = ls ::: List(Fibonacci(x-1));
+      cal_fib_seq(x-1,nl);
     }
   }
 
@@ -24,6 +24,7 @@ object sixth {
   def main(args: Array[String]): Unit = {
     print("Enter Value: ");
     val x = StdIn.readLine().toInt;
-    cal_fib_seq(x);
+    val l : List[Int] = List();
+    println(cal_fib_seq(x,l));
   }
 }
