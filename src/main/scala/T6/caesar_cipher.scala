@@ -26,9 +26,20 @@ object caesar_cipher {
 
 
   def main(args: Array[String]): Unit = {
+
     print("Enter Text: ");
     var x = StdIn.readLine();
-    println(encrypt(x,2));
-    println(decrypt(x,2));
+
+    print("Enter shift: ");
+    var shift = StdIn.readLine().toInt;
+
+    print("Encrypt(1) or Decrypt(2): ");
+    var choice = StdIn.readLine();
+    if(choice == "1"){
+      println(encrypt(x,shift));
+    }else{
+      println(decrypt(x,shift));
+    }
+
   }
 }
