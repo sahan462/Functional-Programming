@@ -5,17 +5,23 @@ object caesar_cipher {
   val alphabet = "abcdefghijklmnopqrstuvwxyz";
 
   def encrypt(text: String, shift: Int): String = {
-    var new_string = ""
+    var encrypted_string = ""
     for(letter<-text){
       var index = alphabet.indexOf(letter);
       var new_index = (shift+index) % 26;
-      new_string = new_string + alphabet(new_index);
+      encrypted_string = encrypted_string + alphabet(new_index);
     }
-    return new_string;
+    return encrypted_string;
   }
 
-  def decrypt(text: String, shift: Int): Unit = {
-
+  def decrypt(text: String, shift: Int): String = {
+    var decrypted_string = ""
+    for (letter <- text) {
+      var index = alphabet.indexOf(letter);
+      var new_index = (index-shift) % 26;
+      decrypted_string = decrypted_string + alphabet(new_index);
+    }
+    return decrypted_string;
   }
 
 
@@ -23,6 +29,6 @@ object caesar_cipher {
     print("Enter Text: ");
     var x = StdIn.readLine();
     println(encrypt(x,2));
-    //decrypt(x,2);
+    println(decrypt(x,2));
   }
 }
