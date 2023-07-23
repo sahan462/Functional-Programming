@@ -4,7 +4,9 @@ import scala.io.StdIn
 object firstq {
 
   def Prime(x:Int, y:Int): String = {
-    if(y==1){
+    if(x == 1){
+      return "false"
+    }else if(y==1){
       return "true";
     }else{
       if(x%y == 0){
