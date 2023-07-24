@@ -8,7 +8,7 @@ object caesar_cipher {
     var encrypted_string = ""
     for(letter<-text){
       var index = alphabet.indexOf(letter);
-      var new_index = (shift+index) % 26;
+      var new_index = (index-shift+26) % 26;
       encrypted_string = encrypted_string + alphabet(new_index);
     }
     return encrypted_string;
@@ -18,7 +18,7 @@ object caesar_cipher {
     var decrypted_string = ""
     for (letter <- text) {
       var index = alphabet.indexOf(letter);
-      var new_index = (index-shift) % 26;
+      var new_index = (index+shift) % 26;
       decrypted_string = decrypted_string + alphabet(new_index);
     }
     return decrypted_string;
