@@ -29,9 +29,18 @@ object caesar_cipher {
   def decrypt(text: String, shift: Int): String = {
     var decrypted_string = ""
     for (letter <- text) {
-      var index = alphabet.indexOf(letter);
-      var new_index = (index+shift) % 26;
-      decrypted_string = decrypted_string + alphabet(new_index);
+      if (letter == ' ') {
+        decrypted_string = decrypted_string + ' ';
+      } else {
+        var index = alphabet.indexOf(letter.toLower);
+        var new_index = (index + shift) % 26;
+        if (letter.isUpper) {
+          decrypted_string = decrypted_string + alphabet(new_index).toUpper;
+        } else {
+          decrypted_string = decrypted_string + alphabet(new_index);
+        }
+
+      }
     }
     return decrypted_string;
   }
