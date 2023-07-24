@@ -48,6 +48,9 @@ object caesar_cipher {
 
   def main(args: Array[String]): Unit = {
 
+    //str1 = THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+    //str2 = QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD 3shifts
+
     print("Enter Text: ");
     var x = StdIn.readLine();
 
