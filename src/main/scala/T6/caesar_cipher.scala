@@ -7,9 +7,21 @@ object caesar_cipher {
   def encrypt(text: String, shift: Int): String = {
     var encrypted_string = ""
     for(letter<-text){
-      var index = alphabet.indexOf(letter);
-      var new_index = (index-shift+26) % 26;
-      encrypted_string = encrypted_string + alphabet(new_index);
+      if(letter == ' '){
+        encrypted_string = encrypted_string + ' ';
+      }else{
+        var index = alphabet.indexOf(letter.toLower);
+        var new_index = (index - shift) % 26;
+        if (new_index < 0) {
+          new_index = new_index + 26;
+        }
+        if(letter.isUpper){
+          encrypted_string = encrypted_string + alphabet(new_index).toUpper;
+        }else{
+          encrypted_string = encrypted_string + alphabet(new_index);
+        }
+
+      }
     }
     return encrypted_string;
   }
