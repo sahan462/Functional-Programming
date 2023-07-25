@@ -5,10 +5,11 @@ object caesar_cipher {
   val alphabet = "abcdefghijklmnopqrstuvwxyz";
 
   def encrypt(text: String, shift: Int): String = {
+
     var encrypted_string = ""
     for(letter<-text){
-      if(letter == ' '){
-        encrypted_string = encrypted_string + ' ';
+      if(!letter.isLetter){
+        encrypted_string = encrypted_string + letter;
       }else{
         var index = alphabet.indexOf(letter.toLower);
         var new_index = (index - shift) % 26;
@@ -24,12 +25,14 @@ object caesar_cipher {
       }
     }
     return encrypted_string;
+
   }
 
   def decrypt(text: String, shift: Int): String = {
+
     var decrypted_string = ""
     for (letter <- text) {
-      if (letter == ' ') {
+      if (!letter.isLetter) {
         decrypted_string = decrypted_string + ' ';
       } else {
         var index = alphabet.indexOf(letter.toLower);
@@ -43,6 +46,13 @@ object caesar_cipher {
       }
     }
     return decrypted_string;
+
+  }
+
+  def cipher(text:String, shift: Int)(func:(String,Int) => String): Unit = {
+    println("Before Translate: " + text);
+    println("After Translate: "+ func(text,shift));
+
   }
 
 
@@ -60,9 +70,9 @@ object caesar_cipher {
     print("Encrypt(1) or Decrypt(2): ");
     var choice = StdIn.readLine();
     if(choice == "1"){
-      println(encrypt(x,shift));
+      cipher(x,shift)(encrypt);
     }else{
-      println(decrypt(x,shift));
+      cipher(x,shift)(decrypt);
     }
 
   }
