@@ -33,7 +33,7 @@ object caesar_cipher {
     var decrypted_string = ""
     for (letter <- text) {
       if (!letter.isLetter) {
-        decrypted_string = decrypted_string + ' ';
+        decrypted_string = decrypted_string + letter;
       } else {
         var index = alphabet.indexOf(letter.toLower);
         var new_index = (index + shift) % 26;
