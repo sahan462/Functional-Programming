@@ -13,5 +13,4 @@ object secondq {
     calculateSquare(squareNumbers, list);
   }
 
-
 }
