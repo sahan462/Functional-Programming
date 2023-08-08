@@ -12,6 +12,4 @@ object secondq {
     val list = List(1, 2, 3, 4, 5);
     calculateSquare(squareNumbers, list);
   }
-
-
 }
