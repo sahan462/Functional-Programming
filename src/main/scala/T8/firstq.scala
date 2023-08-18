@@ -23,6 +23,4 @@ object firstq {
     var amount = StdIn.readLine();
     print("Interest :" + calcInterest(amount.toFloat));
   }
-
-
 }
