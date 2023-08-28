@@ -16,11 +16,6 @@ class Rational_Q2 {
   }
  }
 
- def neg: Rational_Q2 = {
-  val neg_ob = new Rational_Q2(-this.numerator, this.denominator)
-  println(neg_ob.numerator + "/" + neg_ob.denominator)
-  neg_ob
- }
 
  def -(that: Rational_Q2): Rational_Q2 = {
   val commonDenominator = this.denominator * that.denominator

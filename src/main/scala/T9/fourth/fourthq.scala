@@ -1,6 +1,4 @@
-package T9
-
-package T9
+package T9.fourth
 
 class Bank(accounts: List[Account]) {
   def accountsWithNegativeBalances: List[Account] = {
