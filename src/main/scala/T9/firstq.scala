@@ -20,20 +20,6 @@ class Rational {
     println(neg_ob.numerator + "/" + neg_ob.denominator)
   }
 
-  def -(that: Rational): Rational = {
-    val commonDenominator = this.denominator * that.denominator
-    val newNumerator = (this.numerator * that.denominator) - (that.numerator * this.denominator)
-    new Rational(newNumerator, commonDenominator)
-  }
-
-  def getNumerator(): String = {
-    return this.numerator.toString
-  }
-
-  def getDenominator(): String = {
-    return this.denominator.toString
-  }
-
 }
 
 object firstq {

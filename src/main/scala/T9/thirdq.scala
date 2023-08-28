@@ -1,4 +1,5 @@
 package T9
+
 class Account(nic:String, val accId: Int, var balance: Double = 0.0){
 
   def deposit(amount: Double): Unit = {
@@ -10,7 +11,7 @@ class Account(nic:String, val accId: Int, var balance: Double = 0.0){
   }
 
 
-  def transfer(account: Account, amount:Double) : Unit = {
+  def transfer(account: fourth.Account, amount:Double) : Unit = {
     if(this.balance < amount){
       println("\n"+"Insufficient Balance!!")
     }else{
@@ -31,11 +32,11 @@ object thirdq {
 
   def main(args: Array[String]): Unit = {
 
-    val account_1 = new Account("2000130003276", 0x1)
+    val account_1 = new fourth.Account("2000130003276", 0x1)
     account_1.deposit(5000)
 
-    val account_2 = new Account("2000030001346", 0x2)
-    val account_3 = new Account("199930001594", 0x3)
+    val account_2 = new fourth.Account("2000030001346", 0x2)
+    val account_3 = new fourth.Account("199930001594", 0x3)
 
     account_1.transfer(account_2,2000);
     account_1.transfer(account_3, 5000);
