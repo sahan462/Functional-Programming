@@ -5,7 +5,7 @@ import scala.io.StdIn
 object secondq {
 
 
-  def check(x : Int) : String = x%2 match {
+  def check(x : Int)  = x%2 match {
     case 0 => "EVEN";
     case 1 => "ODD";
     case _ => "Error";

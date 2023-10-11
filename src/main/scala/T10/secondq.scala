@@ -4,7 +4,7 @@ object secondq {
 
   def countLetterOccurrences(nameList: List[String]): Unit = {
 
-    val nameLengthList = nameList.map(element => element.length);
+    val nameLengthList = nameList.map(element => element.replaceAll("\\s","").length);
     val letterCount = nameLengthList.reduce((x, y) => x + y) ;
     print("Total count of letter occurrences: " + letterCount);
 
